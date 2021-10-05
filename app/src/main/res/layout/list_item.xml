@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="false"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="false"
+
+    android:layout_marginLeft="@dimen/margin15"
+    android:layout_marginTop="@dimen/margin15"
+    android:layout_marginRight="@dimen/margin15"
+    android:background="@drawable/gray_card"
+    android:fadingEdge="horizontal|vertical"
+    android:gravity="center">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="179dp"
+        android:layout_gravity="center|center_horizontal|center_vertical"
+        android:layout_marginLeft="@dimen/margin5"
+        android:layout_marginTop="@dimen/margin5"
+        android:layout_marginRight="@dimen/margin5"
+        android:layout_marginBottom="@dimen/margin5"
+        android:background="@drawable/card_view"
+        android:paddingLeft="@dimen/d5"
+        android:paddingTop="@dimen/d5"
+        android:paddingBottom="@dimen/d5">
+
+        <Button
+            android:id="@+id/truebtn"
+            android:layout_width="15dp"
+            android:layout_height="16dp"
+            android:background="@android:drawable/checkbox_on_background"
+            app:layout_constraintEnd_toEndOf="@+id/brand"
+            app:layout_constraintTop_toTopOf="@+id/rateTextView" />
+
+        <Button
+            android:id="@+id/falsebtn"
+            android:layout_width="15dp"
+            android:layout_height="16dp"
+            android:background="@android:drawable/checkbox_off_background"
+            app:layout_constraintEnd_toEndOf="@+id/brand"
+            app:layout_constraintTop_toTopOf="@+id/rateTextView" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/constructionYear"
+            app:layout_constraintStart_toStartOf="@+id/rateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/rateTextView" />
+
+        <TextView
+            android:id="@+id/rateTextView"
+            android:layout_width="92dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/isUsed"
+            app:layout_constraintStart_toStartOf="@+id/brand"
+            app:layout_constraintTop_toBottomOf="@+id/brand" />
+
+        <TextView
+            android:id="@+id/brand"
+            android:layout_width="164dp"
+            android:layout_height="38dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/title"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="116dp"
+            android:layout_height="match_parent"
+
+            app:cardCornerRadius="@dimen/card_corner_radius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:adjustViewBounds="false"
+                android:baselineAlignBottom="false" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="46dp"
+            android:layout_height="20dp"
+            android:text="@string/space"
+            app:layout_constraintBottom_toBottomOf="@+id/dateTextView"
+            app:layout_constraintEnd_toEndOf="@+id/brand"
+            app:layout_constraintTop_toTopOf="@+id/dateTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
